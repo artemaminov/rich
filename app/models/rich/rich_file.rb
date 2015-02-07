@@ -25,7 +25,7 @@ module Rich
     after_create :cache_style_uris_and_save
     before_update :cache_style_uris
 
-
+    attr_accessible :simplified_type
 
 
     def set_styles
