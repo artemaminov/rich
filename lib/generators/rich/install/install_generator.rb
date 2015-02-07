@@ -24,6 +24,12 @@ module Rich
       def install_javascript
         template 'rich.js', 'app/assets/javascripts/rich.js'
       end
+
+      def active_admin
+        if File.exists? 'app/assets/stylesheets/active_admin.css.scss'
+          append_to_file 'app/assets/stylesheets/active_admin.css.scss', '@import "rich/active_admin";'
+        end
+      end
       
       def create_migrations
         rake "rich:install:migrations"
