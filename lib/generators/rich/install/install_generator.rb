@@ -27,7 +27,7 @@ module Rich
 
       def active_admin
         if File.exists? 'app/assets/stylesheets/active_admin.css.scss'
-          append_to_file 'app/assets/stylesheets/active_admin.css.scss', '@import "rich/active_admin";'
+          append_to_file 'app/assets/stylesheets/active_admin.css.scss', '@import "rich/active_admin_support";'
         end
       end
       
